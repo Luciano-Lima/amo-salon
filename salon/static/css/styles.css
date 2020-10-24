@@ -1,4 +1,219 @@
+/* Global Styling */
 body, html {
-    margin: 0;
-    
+    /* margin: 0; */
+    /* padding: 0; */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.75em;
+    /* color: rgb(205 190 138 / 0.4); */
+    background-color: rgb(205 190 138 / 0.4);
+    height: 100%;
+    text-align: center;  
+    font-weight: 800;
 }
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.col-md-6 {
+    padding-right:0px;
+    padding-left:0px
+}
+
+/* Navigation */
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(110 79 79);
+    padding-right: 20px;
+    font-family: sans-serif, monospace;
+    font-weight: 400;
+}
+
+.navbar-brand img {
+    height: 30px;
+    opacity: .8;
+}
+
+.bg-light {
+    background-color: rgb(214 214 214) !important;
+}
+
+/* Home background */
+.background-cover img {
+    position: relative;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    opacity: .9;
+}
+
+.background-text  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: .8rem;
+    line-height: 1em;
+    font-family: 'Oswald', sans-serif;
+    transform: translate(-50%, -50%);
+    overflow-x: visible;
+}
+
+.background-cover-line_break {
+    height: 10px;
+    border-top: 3px solid #ffeb3bb3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    color: rgb(255 255 255);
+    text-transform: uppercase;
+    padding: 20px 0px;
+}
+
+.wrapper-bg {
+    width: 100vw;
+    height:auto;
+    background-color: rgb(133 105 71 / 0.8);
+}
+
+.inverse-bg-color {
+    background-color:rgb(255 255 171 / 30%);
+    height: 100%;
+    width: 100%;
+}
+
+.amo-logo {
+    height: 100%;
+    padding: 30px 0px; 
+}
+
+.about {
+    padding: 30px 30px 0 30px; 
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #c1b297;
+    border-color: #c1b297;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #b8a878;
+    border-color: #b8a878;
+}
+
+/* Styling for team work section */
+
+
+/* End of team work styling   */
+
+blockquote:before{
+    content: "❞";
+    font-family: system-ui;
+    font-size: 50px;
+    position: relative;
+    top: 0;
+    align-content: center;
+    color: #ebe5d0;
+    opacity: .7;
+}
+
+
+.carousel-inner {
+    width: 80%;   
+}
+
+.content-wrapper {
+    padding: 30px 0px; 
+}
+
+
+.brand {
+    background-color: rgb(214 214 214 / .2);
+    height: 91px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand img {
+    width: 100px;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(209 199 165);
+    padding-bottom: 30px;
+}
+
+a.phone {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    background-color:rgb(214 214 214) !important;
+}
+
+/* Scroll reveal */
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
+.imghvr-zoom-out {
+    background-color: #0d1118;
+}
+
+[class^=imghvr-] figcaption {
+    background-color: #9E9E9E;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+}
+
+[class^=imghvr-] figcaption p {
+    padding-top: 50%;
+}
+
+
+/* Pop */
+@-webkit-keyframes hvr-pop {
+    50% {
+      -webkit-transform: scale(1.3);
+      transform: scale(1.2);
+    }
+  }
+  @keyframes hvr-pop {
+    50% {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+  .hvr-pop {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+    -webkit-animation-name: hvr-pop;
+    animation-name: hvr-pop;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+
+/* Media Queries */
+

@@ -1,25 +1,224 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-{% block content %}
-<h1>home page</h1>
-<p>A modern and stylish salon located in the heart of Edgeware, Amo Hair & Beauty offers a full range of hair and beauty
-    services for all your wants and needs. Enjoy a moment of indulgence in the calm, clean and cosy confines of this
-    contemporary space as you're treated to a well-earned session of beauty therapy in the hands of experienced
-    professionals.
+<div class="background-cover">
+  <img src="{% static 'img/bg_img.jpg' %}" alt="background-cover" />
+</div>
+<div class="background-text">
+  <p class="animate__animated animate__fadeInLeftBig">Amo Hair</p>
+  <hr />
+  <p
+    class="animate__animated animate__backInDown background-cover-line_break"
+  ></p>
+  <p class="animate__animated animate__fadeInRightBig text-center">Beauty</p>
+</div>
 
-    Equipped with a luxurious hair studio, specialist nail bar and private treatment room, this one-stop-shop has all
-    you need to get your fix, whether you're after a fresh new style or just a bit of maintenance.
+<div class="container-fluid">
+  <section id="main-section">
+    <h1>What amo has to offer you</h1>
+    <div class="wrapper-bg">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="inverse-bg-color">
+            <img
+              class="amo-logo"
+              src="{% static 'img/logo-2.png' %}"
+              alt="logo-2"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="about">
+            <p>
+              A modern and stylish salon located in the heart of Edgware, Amo
+              Hair & Beauty offers a full range of hair and beauty services for
+              all your wants and needs. Enjoy a moment of indulgence in the
+              calm, clean and cosy confines of this contemporary space as you're
+              treated to a well-earned session of beauty therapy in the hands of
+              experienced professionals.
+            </p>
+          </div>
+          <button
+            class="btn btn-secondary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            Read More
+          </button>
+          <div class="collapse" id="collapseExample">
+            <div class="about">
+              <p>
+                Equipped with a luxurious hair studio, specialist nail bar and
+                private treatment room, this one-stop-shop has all you need to
+                get your fix, whether you're after a fresh new style or just a
+                bit of maintenance.
+              </p>
+              <p>
+                Choose from a wide selection of classic hair treatments, ranging
+                from quick trims to restyle cuts and stunning colour highlights.
+                Let their master nail technician restore your hands and feet to
+                their flawless best with a Shellac manicure or pedicure, or try
+                one of their innovative skin treatments, designed to combat
+                signs of ageing and rejuvenate your pores.
+              </p>
+              <p>
+                Whichever treatment you stop in for, the team of NVQ3-qualified
+                therapists have the skill and expertise to deliver amazing,
+                lasting results. Amo can be found on Edgwarebury Lane, just a
+                short walk from Edgeware underground station. Pay and display
+                parking is available outside the venue.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    Choose from a wide selection of classic hair treatments, ranging from quick trims to restyle cuts and stunning
-    colour highlights. Let their master nail technician restore your hands and feet to their flawless best with a
-    Shellac manicure or pedicure, or try one of their innovative skin treatments, designed to combat signs of ageing and
-    rejuvenate your pores.
+  <section id="team-work">
+    <h2 class="">Meet our team of Specialists</h2>
+    <div class="team-work">
+      <div class="row">
+        <figure class="imghvr-fade"></figure>
+        <div class="col-md-4">
+          <figure class="imghvr-zoom-out">
+            <img src="{% static 'img/photo.jpg' %}" alt="team one" />
+            <figcaption>
+              <p class="lead">Ingrid</p>
+              <p>Senior Stylist</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <figure class="imghvr-zoom-out">
+            <img src="{% static 'img/photo-3.jpg' %}" alt="team two" />
+            <figcaption>
+              <p class="lead m-3">Bogdan</p>
+              <p>Senior Stylist</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <figure class="imghvr-zoom-out">
+            <img src="{% static 'img/photo-2.jpg' %}" alt="team three" />
+            <figcaption>
+              <p class="lead m-3">Ana</p>
+              <p>Senior therapist</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    Whichever treatment you stop in for, the team of NVQ3-qualified therapists have the skill and expertise to deliver
-    amazing, lasting results.
-
-    Amo can be found on Edgwarebury Lane, just a short walk from Edgeware underground station. Pay and display parking
-    is available outside the venue.</p>
-
+  <section id="prod-testemonials">
+    <div class="wrapper-bg">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>testimonials</h4>
+          <blockquote></blockquote>
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner mx-auto">
+              <div class="carousel-item active">
+                <p class="d-block w-100 text-center">
+                  First time at the salon and ingrid was professional, caring
+                  and understood what I was asking for. Would definitely use the
+                  salon again and would request Ingrid.
+                </p>
+                <p class="text-center">Karen</p>
+              </div>
+              <div class="carousel-item">
+                <p class="d-block w-100 text-center">
+                  Good Covid precautions in place. Exceptionally clean salon.
+                  Staff wear face shields so you never feel compromised.
+                </p>
+                <p class="text-center">Alison</p>
+              </div>
+              <div class="carousel-item">
+                <p class="d-block w-100 text-center">
+                  I've had a haircut and blow dry and I am very happy with the
+                  result. Ingrid is very knowledgeable. Thank you so much! I'll
+                  be back definitely.
+                </p>
+                <p class="text-center">Elena</p>
+              </div>
+              <div class="carousel-item">
+                <p class="d-block w-100 text-center">
+                  Great haircut and friendly staff! I had a bad haircut from
+                  another salon a month ago and thankfully Ingrid managed to
+                  even it out and fix it.
+                </p>
+                <p class="text-center">Shankary</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inverse-bg-color">
+            <h4>some of the brands we work with</h4>
+            <div class="content-wrapper">
+              <div class="row text-center">
+                <div class="col">
+                  <div class="brand">
+                    <img
+                      class="hvr-pop"
+                      src="{% static 'img/loreal.png' %}"
+                      alt="loreal logo"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="brand">
+                    <img
+                      class="hvr-pop"
+                      src="{% static 'img/dermalogica.png' %}"
+                      alt="dermatologica logo"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="brand">
+                    <img
+                      class="hvr-pop"
+                      src="{% static 'img/shellac.png' %}"
+                      alt="shellac"
+                    />
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="row text-center">
+                <div class="col">
+                  <div class="brand">
+                    <img
+                      class="hvr-pop mt-4"
+                      src="{% static 'img/opi.png' %}"
+                      alt="opi logo"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="brand">
+                    <img
+                      class="hvr-pop"
+                      src="{% static 'img/wella.png' %}"
+                      alt="wella logo"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="brand">
+                    <img class="hvr-pop" src="{% static 'img/olaplex.png' %}" alt="olaples logo"/> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 {% endblock %}
