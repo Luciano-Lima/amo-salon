@@ -3,8 +3,169 @@
 
 
 {% block content %}
-<h1>services page</h1>
 
+<div class="container">
+    <section id="services" class="price-list">
+        <h4>Price List</h4>
+        <Accordion price list>
+            <div class="accordion mt-3" id="accordionExample">
+                <!-- <Collapse One Haircuts & Hairdressing-->
+                <div class="card first-row">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Ladies - Haircuts & Hairdressing<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            {% for hair_cut in hairCutting %}
+                            <p>{{ hair_cut.name }} from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ hair_cut.price }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!-- Collapse Two Hair Colouring & Highlights-->
+                <div class="card first-row">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Ladies - Hair Colouring & Highlights<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            {% for hair_colour in hairColouring %}
+                            <p>{{ hair_colour.name }} from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ hair_colour.price }}</p>
+
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!-- Collapse Three Eyebrows & Eyelashes-->
+                <div class="card first-row">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Eyebrows & Eyelashes<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            {% for eyebrows in eyebrows %}
+                            <p>{{ eyebrows.name }} from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ eyebrows.price }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!-- Collapse Four Waxing-->
+                <div class="card secound-row">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                Ladies' Waxing<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            {% for wax in ladiesWaxing %}
+                            <p>{{ wax.name }} from<i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ wax.price }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!-- Collapse Five Waxing Packages-->
+                <div class="card secound-row">
+                    <div class="card-header" id="headingFive">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                Ladies' Waxing - Packages<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            {% for pk in waxPackage %}
+                            <p>{{ pk.name }} from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ pk.price }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!-- Collapse Six Men's Waxing-->
+                <div class="card secound-row">
+                    <div class="card-header" id="headingSix">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                Men's Waxing<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            {% for menWax in mensWaxing %}
+                            <p>{{ menWax.name }} from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ menWax.price }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!-- Collapse Seven Massage -->
+                <div class="card secound-row">
+                    <div class="card-header" id="headingSeven">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                Massage<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            {% for massage in massage %}
+                            <p>{{ massage.name }} <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ massage.price }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!-- Collapse Eight Non Purchasable -->
+                <div class="card secound-row">
+                    <div class="card-header" id="headingEight">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                Non Purchasable<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            {% for nonP in nonP %}
+                            <p>{{ nonP.name }} <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ nonP.price }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Accordion price list -->
+    </section>
+</div>
 {% endblock %}
 
 

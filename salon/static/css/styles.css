@@ -3,8 +3,9 @@ body, html {
     /* margin: 0; */
     /* padding: 0; */
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
     line-height: 1.75em;
-    /* color: rgb(205 190 138 / 0.4); */
+    color: #e9ecef;
     background-color: rgb(205 190 138 / 0.4);
     height: 100%;
     text-align: center;  
@@ -145,7 +146,7 @@ blockquote:before{
 
 /* Footer */
 footer {
-    background-color: rgb(209 199 165);
+    /* background-color: rgb(209 199 165); */
     padding-bottom: 30px;
 }
 
