@@ -1,8 +1,34 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load crispy_forms_tags %}
 
 {% block content %}
-<h1>contact page</h1>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <iframe class="iframe"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9908.989574129717!2d-0.2223478!3d51.6186772!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487616a3eb79895f%3A0xa365d876b2113f2c!2sAmo%20Hair%26Beauty%20Salon!5e0!3m2!1sen!2suk!4v1603913928446!5m2!1sen!2suk"
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+        </div>
+        <div class="col-12">
+            <h1>get in touch</h1>
+            {% if messages in message %}
+                <p class="alert alert-{{ message.tags }}"></p>
+            {% endif %}
+            
+            <div class="contactForm">
+                
+                <form action="{% url 'contact' %}" method="POST">
+                    {% csrf_token %}
+                    {{ contact_form | crispy  }}
+                    <button type="submit" class="btn btn-secondary general-style-btn ml-0">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

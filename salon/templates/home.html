@@ -1,33 +1,29 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
-
-<div class="background-cover">
-  <img src="{% static 'img/bg_img.jpg' %}" alt="background-cover" />
-</div>
-<div class="background-text">
-  <p class="animate__animated animate__fadeInLeftBig">Amo Hair</p>
-  <hr />
-  <p
-    class="animate__animated animate__backInDown background-cover-line_break"
-  ></p>
-  <p class="animate__animated animate__fadeInRightBig text-center">Beauty</p>
-</div>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
 <div class="container-fluid">
+  <div class="background-cover">
+    <img src="{% static 'img/bg_img.jpg' %}" alt="background-cover" />
+  </div>
+  <div class="background-text">
+    <p class="animate__animated animate__fadeInLeftBig">Amo Hair</p>
+    <hr>
+    <p class="animate__animated animate__backInDown background-cover-line_break"></p>
+    <p class="animate__animated animate__fadeInRightBig text-center">Beauty</p>
+  </div>
+  <!-- main section -->
   <section id="main-section">
     <h1>What amo has to offer you</h1>
-    <div class="wrapper-bg">
+    <div class="wrapper-bg first-col">
       <div class="row">
         <div class="col-md-6">
-          <div class="inverse-bg-color">
-            <img
-              class="amo-logo"
-              src="{% static 'img/logo-2.png' %}"
-              alt="logo-2"
-            />
+          <div class="inverse-bg-color content">
+            <img class="amo-logo" src="{% static 'img/logo-2.png' %}" alt="logo-2" />
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="about">
+        <div class="col-md-6 sec-col">
+          <div class="content">
             <p>
               A modern and stylish salon located in the heart of Edgware, Amo
               Hair & Beauty offers a full range of hair and beauty services for
@@ -36,51 +32,45 @@
               treated to a well-earned session of beauty therapy in the hands of
               experienced professionals.
             </p>
-          </div>
-          <button
-            class="btn btn-secondary"
-            type="button"
-            data-toggle="collapse"
-            data-target="#collapseExample"
-            aria-expanded="false"
-            aria-controls="collapseExample"
-          >
-            Read More
-          </button>
-          <div class="collapse" id="collapseExample">
-            <div class="about">
-              <p>
-                Equipped with a luxurious hair studio, specialist nail bar and
-                private treatment room, this one-stop-shop has all you need to
-                get your fix, whether you're after a fresh new style or just a
-                bit of maintenance.
-              </p>
-              <p>
-                Choose from a wide selection of classic hair treatments, ranging
-                from quick trims to restyle cuts and stunning colour highlights.
-                Let their master nail technician restore your hands and feet to
-                their flawless best with a Shellac manicure or pedicure, or try
-                one of their innovative skin treatments, designed to combat
-                signs of ageing and rejuvenate your pores.
-              </p>
-              <p>
-                Whichever treatment you stop in for, the team of NVQ3-qualified
-                therapists have the skill and expertise to deliver amazing,
-                lasting results. Amo can be found on Edgwarebury Lane, just a
-                short walk from Edgeware underground station. Pay and display
-                parking is available outside the venue.
-              </p>
-            </div>
+              <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Read More
+              </button>
+              <div class="collapse" id="collapseExample">
+                <div class="content">
+                  <p>
+                    Equipped with a luxurious hair studio, specialist nail bar and
+                    private treatment room, this one-stop-shop has all you need to
+                    get your fix, whether you're after a fresh new style or just a
+                    bit of maintenance.
+                  </p>
+                  <p>
+                    Choose from a wide selection of classic hair treatments, ranging
+                    from quick trims to restyle cuts and stunning colour highlights.
+                    Let their master nail technician restore your hands and feet to
+                    their flawless best with a Shellac manicure or pedicure, or try
+                    one of their innovative skin treatments, designed to combat
+                    signs of ageing and rejuvenate your pores.
+                  </p>
+                  <p>
+                    Whichever treatment you stop in for, the team of NVQ3-qualified
+                    therapists have the skill and expertise to deliver amazing,
+                    lasting results. Amo can be found on Edgwarebury Lane, just a
+                    short walk from Edgeware underground station. Pay and display
+                    parking is available outside the venue.
+                  </p>
+                </div>
+              </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
+  <!-- Section Tean Work -->
   <section id="team-work">
     <h2 class="">Meet our team of Specialists</h2>
     <div class="team-work">
-      <div class="row">
+      <div class="row content">
         <figure class="imghvr-fade"></figure>
         <div class="col-md-4">
           <figure class="imghvr-zoom-out">
@@ -112,11 +102,11 @@
       </div>
     </div>
   </section>
-
+  <!-- Section testimonial -->
   <section id="prod-testemonials">
     <div class="wrapper-bg">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 sec-col">
           <h4>testimonials</h4>
           <blockquote></blockquote>
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -155,36 +145,24 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 first-col">
           <div class="inverse-bg-color">
             <h4>some of the brands we work with</h4>
-            <div class="content-wrapper">
+            <div class="content-wrapper content">
               <div class="row text-center">
                 <div class="col">
                   <div class="brand">
-                    <img
-                      class="hvr-pop"
-                      src="{% static 'img/loreal.png' %}"
-                      alt="loreal logo"
-                    />
+                    <img class="hvr-pop" src="{% static 'img/loreal.png' %}" alt="loreal logo" />
                   </div>
                 </div>
                 <div class="col">
                   <div class="brand">
-                    <img
-                      class="hvr-pop"
-                      src="{% static 'img/dermalogica.png' %}"
-                      alt="dermatologica logo"
-                    />
+                    <img class="hvr-pop" src="{% static 'img/dermalogica.png' %}" alt="dermatologica logo" />
                   </div>
                 </div>
                 <div class="col">
                   <div class="brand">
-                    <img
-                      class="hvr-pop"
-                      src="{% static 'img/shellac.png' %}"
-                      alt="shellac"
-                    />
+                    <img class="hvr-pop" src="{% static 'img/shellac.png' %}" alt="shellac" />
                   </div>
                 </div>
               </div>
@@ -192,25 +170,17 @@
               <div class="row text-center">
                 <div class="col">
                   <div class="brand">
-                    <img
-                      class="hvr-pop mt-4"
-                      src="{% static 'img/opi.png' %}"
-                      alt="opi logo"
-                    />
+                    <img class="hvr-pop mt-4" src="{% static 'img/opi.png' %}" alt="opi logo" />
                   </div>
                 </div>
                 <div class="col">
                   <div class="brand">
-                    <img
-                      class="hvr-pop"
-                      src="{% static 'img/wella.png' %}"
-                      alt="wella logo"
-                    />
+                    <img class="hvr-pop" src="{% static 'img/wella.png' %}" alt="wella logo" />
                   </div>
                 </div>
                 <div class="col">
                   <div class="brand">
-                    <img class="hvr-pop" src="{% static 'img/olaplex.png' %}" alt="olaples logo"/> 
+                    <img class="hvr-pop" src="{% static 'img/olaplex.png' %}" alt="olaples logo" />
                   </div>
                 </div>
               </div>

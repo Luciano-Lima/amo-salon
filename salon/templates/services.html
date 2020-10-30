@@ -15,15 +15,16 @@
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse"
                                 data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Ladies - Haircuts & Hairdressing<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                                Ladies - Haircuts & Hairdressing
                             </button>
+                            <i class="fa fa-arrow-circle-down justify-content-end" aria-hidden="true"></i>
                         </h2>
                     </div>
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            {% for hair_cut in hairCutting %}
-                            <p>{{ hair_cut.name }} from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ hair_cut.price }}</p>
+                            {% for h in hair_cutting %}
+                            <p>{{ h.name }} - from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ h.price }}</p>
                             {% endfor %}
                         </div>
                     </div>
@@ -34,15 +35,16 @@
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Ladies - Hair Colouring & Highlights<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                                Ladies - Hair Colouring & Highlights
                             </button>
+                            <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
                         </h2>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            {% for hair_colour in hairColouring %}
-                            <p>{{ hair_colour.name }} from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ hair_colour.price }}</p>
+                            {% for hcl in hair_colouring %}
+                            <p>{{ hcl.name }} - from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ hcl.price }}</p>
 
                             {% endfor %}
                         </div>
@@ -54,34 +56,36 @@
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                 data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Eyebrows & Eyelashes<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                                Eyebrows & Eyelashes
                             </button>
+                            <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
                         </h2>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                         data-parent="#accordionExample">
                         <div class="card-body">
                             {% for eyebrows in eyebrows %}
-                            <p>{{ eyebrows.name }} from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ eyebrows.price }}</p>
+                            <p>{{ eyebrows.name }} - from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ eyebrows.price }}</p>
                             {% endfor %}
                         </div>
                     </div>
                 </div>
-                <!-- Collapse Four Waxing-->
+                <!-- Collapse Four ladies Waxing-->
                 <div class="card secound-row">
                     <div class="card-header" id="headingFour">
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse"
                                 data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                Ladies' Waxing<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                                Ladies' Waxing
                             </button>
+                            <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
                         </h2>
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            {% for wax in ladiesWaxing %}
-                            <p>{{ wax.name }} from<i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ wax.price }}</p>
+                            {% for wax in ladies_waxing %}
+                            <p>{{ wax.name }} - from<i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ wax.price }}</p>
                             {% endfor %}
                         </div>
                     </div>
@@ -92,15 +96,16 @@
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse"
                                 data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                                Ladies' Waxing - Packages<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                                Ladies' Waxing - Packages
                             </button>
+                            <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
                         </h2>
                     </div>
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            {% for pk in waxPackage %}
-                            <p>{{ pk.name }} from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ pk.price }}</p>
+                            {% for pk in wax_package %}
+                            <p>{{ pk.name }} - from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ pk.price }}</p>
                             {% endfor %}
                         </div>
                     </div>
@@ -111,15 +116,16 @@
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse"
                                 data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                                Men's Waxing<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                                Men's Waxing
                             </button>
+                            <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
                         </h2>
                     </div>
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            {% for menWax in mensWaxing %}
-                            <p>{{ menWax.name }} from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ menWax.price }}</p>
+                            {% for m_wax in mens_waxing %}
+                            <p>{{ m_wax.name }} - from <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ m_wax.price }}</p>
                             {% endfor %}
                         </div>
                     </div>
@@ -130,8 +136,9 @@
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse"
                                 data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                                Massage<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                                Massage
                             </button>
+                            <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
                         </h2>
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
@@ -149,15 +156,16 @@
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse"
                                 data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
-                                Non Purchasable<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                                Non Purchasable
                             </button>
+                            <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
                         </h2>
                     </div>
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            {% for nonP in nonP %}
-                            <p>{{ nonP.name }} <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ nonP.price }}</p>
+                            {% for non_p in non_p %}
+                            <p>{{ non_p.name }} <i class="fa fa-gbp mr-1" aria-hidden="true"></i>{{ non_p.price }}</p>
                             {% endfor %}
                         </div>
                     </div>
