@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
+import smtplib
 from os import path
 from pathlib import Path
 
@@ -141,9 +142,14 @@ STATIC_URL = '/static/'
 
 
 # Email settings
-EMAIL_HOST = os.environ.get('EMAIL_HOST')
-EMAIL_PORT = os.environ.get('EMAIL_PORT')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = True
-# # EMAIL_USE_SSL = False
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
+# EMAIL_HOST = os.environ.get('EMAIL_HOST')
+# EMAIL_PORT = os.environ.get('EMAIL_PORT')
+# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+# print(EMAIL_HOST_PASSWORD)
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
+

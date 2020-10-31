@@ -27,28 +27,19 @@ def services(request):
                   'mens_waxing': mens_waxing,
                   'massage': massage, 
                   'non_p': non_p
-                 })   
+                 })  
+ 
 
 # Conctact views
-# def contact(request):
-#     if request.method == 'POST':
-#         contact_form = ContactForm(request.POST)
-#         if contact_form.is_valid():
-#             'process form'
-#     else:
-#         contact_form = ContactForm()
-#     return render(request, 'contact.html', {'contact_form': contact_form})
-
-
 def contact(request):
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
-            name = request.POST['name']
-            email = request.POST['email']
+            name = request.POST['name'] 
+            email = request.POST['email'] 
             message = request.POST['message']
             # send an email
-            send_mail(name, email, message, ['ccll4ever1@gmail.com'])
+            # send_mail(name, message, email, ['freelance.website.manager@gmail.com'])
         return render(request, 'contact.html', {'name': name, 'contact_form': contact_form})
         messages.success(request, "Thanks for your contact + {'name'} we'll get back to you shortly")
     else:

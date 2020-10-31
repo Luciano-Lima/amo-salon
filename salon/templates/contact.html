@@ -15,18 +15,17 @@
         </div>
         <div class="col-12">
             <h1>get in touch</h1>
-            {% if messages in message %}
-                <p class="alert alert-{{ message.tags }}"></p>
-            {% endif %}
-            
+        {% if messages in message %}
+                <p class="alert alert-{{ messages.tags }}"></p>
+            {% else %}
             <div class="contactForm">
-                
                 <form action="{% url 'contact' %}" method="POST">
                     {% csrf_token %}
                     {{ contact_form | crispy  }}
                     <button type="submit" class="btn btn-secondary general-style-btn ml-0">Submit</button>
                 </form>
             </div>
+        {% endif %}
         </div>
     </div>
 </div>
