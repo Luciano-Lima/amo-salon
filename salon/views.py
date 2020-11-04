@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
 from .models import HairCutting, HairColouring, LadiesWaxing, Eyebrows, WaxPackage, MensWaxing, Massage, NonPurchasable, TeamWorkOne, TeamWorkTwo, TeamWorkThree 
@@ -38,16 +38,16 @@ def services(request):
 # Conctact views
 def contact(request):
     if request.method == 'POST':
-        contact_form = ContactForm(request.POST)
-        if contact_form.is_valid():
-            name = request.POST['name'] 
-            email = request.POST['email'] 
-            message = request.POST['message']
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data.get('name') 
+            email = form.cleaned_data.get('email') 
+            message = form.cleaned_data.get('message')
             # send an email
-            # send_mail(name, message, email, ['freelance.website.manager@gmail.com'])
-        return render(request, 'contact.html', {'name': name, 'contact_form': contact_form})
-        messages.success(request, "Thanks for your contact + {'name'} we'll get back to you shortly")
+            send_mail(name, message, email, ['freelance.website.manager@gmail.com'])
+            messages.success(request, f"Thanks for your contact {name} we'll get back to you shortly!")
+            return redirect('contact')
     else:
-        contact_form = ContactForm()
-    return render(request, 'contact.html', {'contact_form': contact_form})
+        form = ContactForm()
+    return render(request, 'contact.html', {'form': form})
     
