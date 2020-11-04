@@ -87,3 +87,39 @@ class NonPurchasable(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class TeamWorkOne(models.Model):
+    name = models.CharField(max_length=200)
+    category = models.CharField(max_length= 200)
+    photo = models.ImageField(upload_to='img')
+
+    class Meta:
+        verbose_name_plural = 'Team Work One'
+
+    def __str__(self):
+        return self.name
+
+
+class TeamWorkTwo(models.Model):
+    name = models.CharField(max_length=200)
+    category = models.CharField(max_length= 200)
+    photo = models.ImageField(upload_to='img')
+
+    class Meta:
+        verbose_name_plural = 'Team Work Two'
+
+    def __str__(self):
+        return self.name
+
+
+class TeamWorkThree(models.Model):
+    name = models.CharField(max_length=200)
+    category = models.CharField(max_length= 200)
+    photo = models.ImageField(upload_to='img')
+
+    class Meta:
+        verbose_name_plural = 'Team Work Three'
+
+    def __str__(self):
+        return self.name

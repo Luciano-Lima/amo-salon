@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from django.contrib import messages
 from django.core.mail import send_mail
-from .models import HairCutting, HairColouring, LadiesWaxing, Eyebrows, WaxPackage, MensWaxing, Massage, NonPurchasable
+from .models import HairCutting, HairColouring, LadiesWaxing, Eyebrows, WaxPackage, MensWaxing, Massage, NonPurchasable, TeamWorkOne, TeamWorkTwo, TeamWorkThree 
 from .forms import ContactForm
+
 # home views
 def home(request):
-    return render(request, 'home.html')
+    team_one = TeamWorkOne.objects.all()
+    team_two = TeamWorkTwo.objects.all()
+    team_three = TeamWorkThree.objects.all()
+    return render (request, 'home.html', {'team_one': team_one, 'team_two': team_two, 'team_three': team_three})
+    
 
 # servives views
 def services(request):
@@ -27,7 +32,7 @@ def services(request):
                   'mens_waxing': mens_waxing,
                   'massage': massage, 
                   'non_p': non_p
-                 })  
+                 }) 
  
 
 # Conctact views

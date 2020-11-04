@@ -32,35 +32,35 @@
               treated to a well-earned session of beauty therapy in the hands of
               experienced professionals.
             </p>
-              <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample"
-                aria-expanded="false" aria-controls="collapseExample">
-                Read More
-              </button>
-              <div class="collapse" id="collapseExample">
-                <div class="content">
-                  <p>
-                    Equipped with a luxurious hair studio, specialist nail bar and
-                    private treatment room, this one-stop-shop has all you need to
-                    get your fix, whether you're after a fresh new style or just a
-                    bit of maintenance.
-                  </p>
-                  <p>
-                    Choose from a wide selection of classic hair treatments, ranging
-                    from quick trims to restyle cuts and stunning colour highlights.
-                    Let their master nail technician restore your hands and feet to
-                    their flawless best with a Shellac manicure or pedicure, or try
-                    one of their innovative skin treatments, designed to combat
-                    signs of ageing and rejuvenate your pores.
-                  </p>
-                  <p>
-                    Whichever treatment you stop in for, the team of NVQ3-qualified
-                    therapists have the skill and expertise to deliver amazing,
-                    lasting results. Amo can be found on Edgwarebury Lane, just a
-                    short walk from Edgeware underground station. Pay and display
-                    parking is available outside the venue.
-                  </p>
-                </div>
+            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample"
+              aria-expanded="false" aria-controls="collapseExample">
+              Read More
+            </button>
+            <div class="collapse" id="collapseExample">
+              <div class="content">
+                <p>
+                  Equipped with a luxurious hair studio, specialist nail bar and
+                  private treatment room, this one-stop-shop has all you need to
+                  get your fix, whether you're after a fresh new style or just a
+                  bit of maintenance.
+                </p>
+                <p>
+                  Choose from a wide selection of classic hair treatments, ranging
+                  from quick trims to restyle cuts and stunning colour highlights.
+                  Let their master nail technician restore your hands and feet to
+                  their flawless best with a Shellac manicure or pedicure, or try
+                  one of their innovative skin treatments, designed to combat
+                  signs of ageing and rejuvenate your pores.
+                </p>
+                <p>
+                  Whichever treatment you stop in for, the team of NVQ3-qualified
+                  therapists have the skill and expertise to deliver amazing,
+                  lasting results. Amo can be found on Edgwarebury Lane, just a
+                  short walk from Edgeware underground station. Pay and display
+                  parking is available outside the venue.
+                </p>
               </div>
+            </div>
           </div>
         </div>
       </div>
@@ -71,32 +71,40 @@
     <h2 class="">Meet our team of Specialists</h2>
     <div class="team-work">
       <div class="row content">
-        <figure class="imghvr-fade"></figure>
-        <div class="col-md-4">
-          <figure class="imghvr-zoom-out">
-            <img src="{% static 'img/photo.jpg' %}" alt="team one" />
-            <figcaption>
-              <p class="lead">Ingrid</p>
-              <p>Senior Stylist</p>
-            </figcaption>
-          </figure>
-        </div>
+        <!-- team one -->
         <div class="col-lg-4 col-md-4">
           <figure class="imghvr-zoom-out">
-            <img src="{% static 'img/photo-3.jpg' %}" alt="team two" />
+            {% for t in team_one %}
+            <img src="{{ t.photo.url }}" alt="profile name">
             <figcaption>
-              <p class="lead m-3">Bogdan</p>
-              <p>Senior Stylist</p>
+              <p class="lead">{{ t.name }}</p>
+              <p>{{ t.category }}</p>
             </figcaption>
+            {% endfor %}
           </figure>
         </div>
+        <!-- team two -->
         <div class="col-lg-4 col-md-4">
           <figure class="imghvr-zoom-out">
-            <img src="{% static 'img/photo-2.jpg' %}" alt="team three" />
+            {% for t in team_two %}
+            <img src="{{ t.photo.url }}" alt="profile name">
             <figcaption>
-              <p class="lead m-3">Ana</p>
-              <p>Senior therapist</p>
+              <p class="lead">{{ t.name }}</p>
+              <p>{{ t.category }}</p>
             </figcaption>
+            {% endfor %}
+          </figure>
+        </div>
+        <!-- Team three -->
+        <div class="col-lg-4 col-md-4">
+          <figure class="imghvr-zoom-out">
+            {% for t in team_three %}
+            <img src="{{ t.photo.url }}" alt="profile name">
+            <figcaption>
+              <p class="lead">{{ t.name }}</p>
+              <p>{{ t.category }}</p>
+            </figcaption>
+            {% endfor %}
           </figure>
         </div>
       </div>

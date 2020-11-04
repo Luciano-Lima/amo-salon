@@ -186,6 +186,11 @@ blockquote:before {
     background-color: #c06969;
 }
 
+.card-body p {
+    white-space: nowrap;
+    overflow: scroll;
+}
+
 .btn-link {
     color: rgb(225 225 225);
 }
@@ -242,6 +247,19 @@ footer {
 .fa-instagram {
     padding-right: 20px;
 }
+
+.fa-facebook-square:hover, .fa-instagram:hover {
+    color: #e9ecefcf;
+    transform: scale(1.4);
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #e9ecefcf;
+    text-decoration: none
+}
+
+
 
 .fa-arrow-circle-down {
     float: right;
