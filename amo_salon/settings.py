@@ -17,12 +17,7 @@ from pathlib import Path
 if path.exists('env.py'):
     import env
 
-# from django.contrib.messages import constants as messages
-# MESSAGE_TAGS = {
-#     messages.ERROR: 'alert-danger',
-#     messages.SUCCESS: 'alert-success',
-    
-# }
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -139,7 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') #Heroku will use this path to collect the static files 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')#Heroku will use this path to collect the static files 
 STATIC_URL = '/static/'
 
 
@@ -156,5 +151,3 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-
-
