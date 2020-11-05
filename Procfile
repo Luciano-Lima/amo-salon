@@ -1,1 +1,1 @@
-web: gunicorn AMO.wsgi
+web: gunicorn amo_salon.wsgi
