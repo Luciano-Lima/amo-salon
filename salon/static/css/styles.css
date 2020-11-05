@@ -213,7 +213,7 @@ blockquote:before {
 }
 
 .form-control {
-    background-color: #c06969;
+    background-color: #e4d1d3;
 }
 
 .form-control:focus {
@@ -352,6 +352,11 @@ html.sr .load-hidden {
     animation-timing-function: linear;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+}
+
+/* Django validator */
+.invalid-feedback {
+    color: #fafafa;
 }
 
 
