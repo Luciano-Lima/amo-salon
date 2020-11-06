@@ -231,6 +231,10 @@ blockquote:before {
     opacity: .9;
 }
 
+button[type=submit] {
+    background-color: rgb(173 181 189 / 39%);
+}
+
 /* Footer */
 footer {
     /* background-color: rgb(209 199 165); */
