@@ -92,7 +92,7 @@ class NonPurchasable(models.Model):
 class TeamWorkOne(models.Model):
     name = models.CharField(max_length=200)
     category = models.CharField(max_length= 200)
-    photo = models.ImageField(upload_to='img')
+    photo = models.ImageField(upload_to='media')
 
     class Meta:
         verbose_name_plural = 'Team Work One'
@@ -104,7 +104,7 @@ class TeamWorkOne(models.Model):
 class TeamWorkTwo(models.Model):
     name = models.CharField(max_length=200)
     category = models.CharField(max_length= 200)
-    photo = models.ImageField(upload_to='img')
+    photo = models.ImageField(upload_to='media')
 
     class Meta:
         verbose_name_plural = 'Team Work Two'
@@ -116,7 +116,7 @@ class TeamWorkTwo(models.Model):
 class TeamWorkThree(models.Model):
     name = models.CharField(max_length=200)
     category = models.CharField(max_length= 200)
-    photo = models.ImageField(upload_to='img')
+    photo = models.ImageField(upload_to='media')
 
     class Meta:
         verbose_name_plural = 'Team Work Three'
