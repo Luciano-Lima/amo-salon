@@ -31,8 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
+DEBUG = False
 
 ALLOWED_HOSTS = ['amo-hair-beauty.herokuapp.com', '127.0.0.1']
 
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'livereload',
+    # 'livereload',
     'django.contrib.staticfiles',
     'salon',
     'crispy_forms',
@@ -62,7 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'livereload.middleware.LiveReloadScript',
+    # 'livereload.middleware.LiveReloadScript',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
